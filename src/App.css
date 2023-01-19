@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+.meme-hearder {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(5, 108, 119, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.meme-title {
+  color: white;
+  font-weight: 600;
+  font-size: 1.7rem;
+  padding: 2rem 1rem;
+  font-family: cursive;
+}
+
+.meme-logo {
+  height: 4rem;
+  width: 4rem;
+}
+
+.meme-hearder {
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+}
