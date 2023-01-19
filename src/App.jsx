@@ -1,7 +1,6 @@
 import "./App.css";
-import InputForm from "./components/memeForm/InputForm";
-import MemeImageGenerator from "./components/memeImageGenerator/MemeImageGenerator";
-import meme from "./img/meme.png";
+import InputForm from "./components/InputForm";
+import meme from "./imgages/meme.png";
 
 function App() {
   return (
@@ -14,7 +13,6 @@ function App() {
       </div>
       <div className="meme-body">
         <InputForm />
-        {/* <MemeImageGenerator /> */}
       </div>
     </div>
   );
