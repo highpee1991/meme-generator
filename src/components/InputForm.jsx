@@ -10,6 +10,26 @@ const InputForm = () => {
 
   const [memeImg, setMemeImg] = useState([]);
 
+  const [screenSize, setCreenSize] = useState({
+    dynamicWidth: window.innerWidth,
+    dynamicHeight: window.innerHeight,
+  });
+
+  const handleScreenSize = () => {
+    setCreenSize({
+      dynamicWidth: window.innerWidth,
+      dynamicHeight: window.innerHeight,
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleScreenSize);
+
+    return () => {
+      window.removeEventListener("resize", handleScreenSize);
+    };
+  }, [screenSize]);
+
   useEffect(() => {
     fetch("https://api.imgflip.com/get_memes")
       .then((res) => res.json())
@@ -61,10 +81,9 @@ const InputForm = () => {
       </div>
       <div className="btn">
         <button className="main-btn" onClick={handleURL}>
-          Get New Meme Image 🐶
-          {/* <span>
-            <img src={btnMeme} />
-          </span> */}
+          {screenSize.dynamicWidth < 350
+            ? "Get Meme Image 🐶"
+            : " Get New Meme Image 🐶"}
         </button>
       </div>
       <div className="img-rapper">
