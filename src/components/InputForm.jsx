@@ -61,7 +61,7 @@ const InputForm = () => {
       </div>
       <div className="btn">
         <button className="main-btn" onClick={handleURL}>
-          Get New Meme Image{" "}
+          Get New Meme Image 🐶
           {/* <span>
             <img src={btnMeme} />
           </span> */}
